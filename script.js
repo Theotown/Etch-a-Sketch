@@ -49,3 +49,14 @@ setGridButton.addEventListener("click", () => {
   gridSize = size;
   createGrid(gridSize);
 });
+
+resetGridButton.addEventListener("click", () => {
+  createGrid(gridSize);
+});
+
+toggleModeButton.addEventListener("click", () => {
+  currentMode = currentMode === "random" ? "darken" : "random";
+  toggleModeButton.textContent = `Mode: ${currentMode === "random" ? "Random Color" : "Darken"}`;
+});
+
+createGrid(gridSize);
