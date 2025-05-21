@@ -39,3 +39,13 @@ function handleHover(e) {
     }
   }
 }
+
+setGridButton.addEventListener("click", () => {
+  let size = parseInt(prompt("Enter grid size (max 100):"));
+  if (isNaN(size) || size < 1 || size > 100) {
+    alert("Invalid input. Please enter a number between 1 and 100.");
+    return;
+  }
+  gridSize = size;
+  createGrid(gridSize);
+});
